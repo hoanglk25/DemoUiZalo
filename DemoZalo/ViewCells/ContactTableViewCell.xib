@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="ContactTableViewCell" customModule="DemoZalo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-2y-6p4">
+                        <rect key="frame" x="20" y="5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ujb-2y-6p4" secondAttribute="height" id="cgP-wm-g6g"/>
+                            <constraint firstAttribute="width" constant="60" id="sIS-SC-Xpe"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHI-Px-IvD">
+                        <rect key="frame" x="100" y="25" width="41.333333333333343" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="U0H-ZA-MS3">
+                        <rect key="frame" x="220" y="24" width="85" height="22"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tim-lq-L7l">
+                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="phone" catalog="system"/>
+                                <connections>
+                                    <action selector="callAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JCb-gx-jLV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-3o-oH9">
+                                <rect key="frame" x="36.333333333333314" y="0.0" width="48.666666666666657" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="video" catalog="system"/>
+                                <connections>
+                                    <action selector="videoAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gfj-db-UQf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Tim-lq-L7l" firstAttribute="width" secondItem="Rjf-3o-oH9" secondAttribute="height" multiplier="75:34" id="iRl-2l-6tB"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qHI-Px-IvD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ddq-fT-gUd"/>
+                    <constraint firstItem="qHI-Px-IvD" firstAttribute="leading" secondItem="ujb-2y-6p4" secondAttribute="trailing" constant="20" id="G5J-dk-NIG"/>
+                    <constraint firstAttribute="trailing" secondItem="U0H-ZA-MS3" secondAttribute="trailing" constant="15" id="Kbd-RQ-dHO"/>
+                    <constraint firstItem="ujb-2y-6p4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hTr-C8-QIX"/>
+                    <constraint firstItem="ujb-2y-6p4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="iI5-Rk-RaH"/>
+                    <constraint firstItem="U0H-ZA-MS3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jah-34-DER"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="ujb-2y-6p4" id="YwM-lm-qWC"/>
+                <outlet property="nameLabel" destination="qHI-Px-IvD" id="iwV-h7-KMH"/>
+                <outlet property="phoneButton" destination="Tim-lq-L7l" id="Gls-5K-39P"/>
+                <outlet property="videoButton" destination="Rjf-3o-oH9" id="hye-Xd-r3d"/>
+            </connections>
+            <point key="canvasLocation" x="107.69230769230769" y="7.8199052132701414"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <image name="video" catalog="system" width="128" height="82"/>
+    </resources>
+</document>
